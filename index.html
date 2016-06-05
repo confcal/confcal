@@ -12,23 +12,17 @@
 </head>
 <body>
 
-  <nav class="pure-g">
-    <div class="pure-u-4-24">
+  <nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <div class="pure-u-3-24">
       <h1>ConfCal</h1>
     </div>
-    <div class="pure-u-10-24">
-      <form class="pure-g">
-        <input class="pure-u-3-4" type="text" placeholder="Search">
-        <input class="pure-u-1-4" type="button" value="Search">
-      </form>
-    </div>
-    <div class="pure-u-10-24">
-      <p class="dates">
+    <div class="pure-u-11-24">
+      <p class="dates pure-hidden-xs pure-hidden-sm pure-hidden-md">
         <a href="#jan">Jan</a>
         <a href="#feb">Feb</a>
         <a href="#mar">Mar</a>
         <a href="#apr">Apr</a>
-        <a href="#may">Mau</a>
+        <a href="#may">May</a>
         <a href="#jun" class="current">Jun</a>
         <a href="#jul">Jul</a>
         <a href="#aug">Aug</a>
@@ -37,42 +31,187 @@
         <a href="#nov">Nov</a>
         <a href="#dec">Dec</a>
       </p>
+      <p class="dates pure-hidden-lg pure-hidden-xl">
+        <a href="#jan">J</a>
+        <a href="#feb">F</a>
+        <a href="#mar">M</a>
+        <a href="#apr">A</a>
+        <a href="#may">M</a>
+        <a href="#jun" class="current">J</a>
+        <a href="#jul">J</a>
+        <a href="#aug">A</a>
+        <a href="#sep">S</a>
+        <a href="#oct">O</a>
+        <a href="#nov">N</a>
+        <a href="#dec">D</a>
+      </p>
+    </div>
+    <div class="pure-u-10-24">
+      <form class="pure-g">
+        <input class="pure-u-3-4" type="text" placeholder="Search">
+        <input class="pure-u-1-4" type="button" value="Search">
+      </form>
     </div>
   </nav>
 
-  <div class="splash-container feature-container -wdcnz">
-    <div class="splash feature">
-      <h2>WDCNZ</h2>
-      <h3 class="-upcase">Mid June</h3>
+<!--
+  <nav class="pure-g">
+    <div class="pure-u-4-24">
+      <h1>ConfCal</h1>
     </div>
-  </div>
+    <div class="pure-u-10-24">
+      <p class="dates pure-hidden-xs pure-hidden-sm pure-hidden-md">
+        <a href="#jan">Jan</a>
+        <a href="#feb">Feb</a>
+        <a href="#mar">Mar</a>
+        <a href="#apr">Apr</a>
+        <a href="#may">May</a>
+        <a href="#jun" class="current">Jun</a>
+        <a href="#jul">Jul</a>
+        <a href="#aug">Aug</a>
+        <a href="#sep">Sep</a>
+        <a href="#oct">Oct</a>
+        <a href="#nov">Nov</a>
+        <a href="#dec">Dec</a>
+      </p>
+      <p class="dates pure-hidden-lg pure-hidden-xl">
+        <a href="#jan">J</a>
+        <a href="#feb">F</a>
+        <a href="#mar">M</a>
+        <a href="#apr">A</a>
+        <a href="#may">M</a>
+        <a href="#jun" class="current">J</a>
+        <a href="#jul">J</a>
+        <a href="#aug">A</a>
+        <a href="#sep">S</a>
+        <a href="#oct">O</a>
+        <a href="#nov">N</a>
+        <a href="#dec">D</a>
+      </p>
+    </div>
+    <div class="pure-u-10-24">
+      <form class="pure-g">
+        <input class="pure-u-3-4" type="text" placeholder="Search">
+        <input class="pure-u-1-4" type="button" value="Search">
+      </form>
+    </div>
+  </nav>
+ -->
+  <section>
+    <article class="splash-container feature-container -wdcnz">
+      <div class="splash feature">
+        <h2>WDCNZ</h2>
+        <h3 class="-upcase">Mid June</h3>
+      </div>
+    </article>
 
-  <div class="pure-g pure-hidden-xs pure-hidden-s">
-    <div class="pure-u-1-4 feature-container -codemania">
-      <div class="feature">
-        <h3>Codemania</h3>
-        <h4 class="-upcase">Mid April</h4>
-      </div>
+    <div class="pure-g pure-hidden-xs pure-hidden-s">
+      <article class="pure-u-1-4 feature-container -codemania">
+        <div class="feature">
+          <h3>Codemania</h3>
+          <h4 class="-upcase">Mid April</h4>
+        </div>
+      </article>
+      <article class="pure-u-1-4 feature-container -elasticon">
+        <div class="feature">
+          <h3>Elasticon</h3>
+          <h4 class="-upcase">Late March</h4>
+        </div>
+      </article>
+      <article class="pure-u-1-4 feature-container -saastr">
+        <div class="feature">
+          <h3>SaaStr</h3>
+          <h4 class="-upcase">Early Feb</h4>
+        </div>
+      </article>
+      <article class="pure-u-1-4 feature-container -wwdc">
+        <div class="feature">
+          <h3>WWDC</h3>
+          <h4 class="-upcase">June</h4>
+        </div>
+      </article>
     </div>
-    <div class="pure-u-1-4 feature-container -elasticon">
-      <div class="feature">
-        <h3>Elasticon</h3>
-        <h4 class="-upcase">Late March</h4>
-      </div>
+  </section>
+
+  <section class="pure-g">
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-2">
+
+      <article class="event">
+        <div class="pure-g">
+          <div class="pure-u-3-4">
+            <div class="details">
+              <h1>WDCNZ</h1>
+              <h2>Wellington, New Zealand</h2>
+              <p class="tags">
+                <a href="">web</a>
+                <a href="">developers</a>
+                <a href="">technology</a>
+              </p>
+            </div>
+          </div>
+          <div class="pure-u-1-4 date">
+            <h3>
+              <span class="bucket">Mid</span>
+              <span class="month">July</span>
+            </h3>
+          </div>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="pure-g">
+          <div class="pure-u-3-4">
+            <div class="details">
+              <h1>Australian Cyber Security Centre (ACSC) Conference</h1>
+              <h2>Canbera, Australia</h2>
+              <p class="tags">
+                <a href="">cyber security</a>
+                <a href="">infosec</a>
+                <a href="">government</a>
+              </p>
+            </div>
+          </div>
+          <div class="pure-u-1-4 date">
+            <h3>
+              <span class="bucket">Mid</span>
+              <span class="month">April</span>
+            </h3>
+            <h5 class="rfp">
+              RFP: Dec - Feb
+            </h5>
+          </div>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="pure-g">
+          <div class="pure-u-3-4">
+            <div class="details">
+              <h1>O'Reilly Security Conference</h1>
+              <h2>New York, USA</h2>
+              <p class="tags">
+                <a href="">infosec</a>
+                <a href="">cyber security</a>
+                <a href="">technology</a>
+              </p>
+            </div>
+          </div>
+          <div class="pure-u-1-4 date">
+            <h3>
+              <span class="bucket">Late</span>
+              <span class="month">October</span>
+            </h3>
+            <h5 class="rfp">
+              RFP: Mar - May
+            </h5>
+          </div>
+        </div>
+      </article>
+
     </div>
-    <div class="pure-u-1-4 feature-container -saastr">
-      <div class="feature">
-        <h3>SaaStr</h3>
-        <h4 class="-upcase">Early Feb</h4>
-      </div>
-    </div>
-    <div class="pure-u-1-4 feature-container -wwdc">
-      <div class="feature">
-        <h3>WWDC</h3>
-        <h4 class="-upcase">June</h4>
-      </div>
-    </div>
-  </div>
+
+  </section>
 
 </body>
 </html>

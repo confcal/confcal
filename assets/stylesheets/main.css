@@ -1,5 +1,6 @@
 html {
   font-family: 'Open Sans', sans-serif;
+  background-color: #22313F;
 }
 
 .-upcase{
@@ -7,9 +8,13 @@ html {
 }
 
 nav {
-  background: rgb(0, 0, 0);
+  background-color: #22313F;
   color: white;
   height: 3rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
 }
 nav h1{
   margin: 0 1rem;
@@ -48,6 +53,9 @@ nav .dates .current{
   font-weight: bold;
 }
 
+.splash-container{
+  margin-top: 3rem;
+}
 
 .feature-container {
   color: white;
@@ -104,4 +112,56 @@ nav .dates .current{
 
 .feature-container.-wwdc {
   background-image: url('/assets/images/wwdc.jpg');
+}
+
+
+.event {
+  background-color: #fff;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+.event:hover {
+  opacity: 0.9;
+}
+.event h1, h2, p{
+  margin: 0.5rem;
+}
+.event .details {
+  padding: 0.5rem;
+}
+.event .tags a {
+  background-color: #557;
+  border-radius: 0.2rem;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.event .date{
+  background-color: #27ae60;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.event .date .bucket {
+  display: block;
+}
+.event .date .month {
+  font-size: 2rem;
+  width: 100%;
+}
+.event .date .rfp {
+  margin: 0;
+  padding: 1rem 0;
+  display: block;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
 }
