@@ -116,9 +116,12 @@
           <span class="bucket">{{bucketFromDate date}}</span>
           <span class="month">{{strftime date "MMMM"}}</span>
         </h2>
-        {{#if rfp_start}}
+        {{#if rfp_end}}
           <h3 class="rfp">
-            RFP: {{strftime rfp_start "MMM"}} - {{strftime rfp_end "MMM"}}
+            RFP: {{#if rfp_start}}
+              {{strftime rfp_start "MMM"}} -
+            {{/if}}
+            {{strftime rfp_end "MMM"}}
           </h3>
         {{/if}}
       </div>
