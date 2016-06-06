@@ -1,7 +1,10 @@
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cabin', sans-serif;
   background-color: #22313F;
   font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6, p, li, a {
+  font-family: 'Cabin', sans-serif;
 }
 
 .-upcase{
@@ -26,6 +29,7 @@ nav h1{
   margin: 0 1rem;
   line-height: 3rem;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 nav form{
   height: 3rem;
@@ -85,6 +89,7 @@ nav .dates .current{
 .feature h2 {
   font-size: 8rem;
   line-height: 8rem;
+
 }
 .feature h3 {
   font-size: 2rem;
@@ -125,23 +130,23 @@ nav .dates .current{
   background-color: #fff;
   margin: 2rem;
 }
-.event h1 {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .event h1, h2, p{
   margin: 0.5rem;
 }
-.event h1{
+.event h1 {
   font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
 }
 .event h2{
+  font-weight: 600;
   font-size: 1rem;
+  line-height: 1rem;
 }
 .event h3{
+  font-weight: 600;
   font-size: 0.75rem;
+  line-height: 0.75rem;
 }
 .event p{
   font-size: 0.65rem;
@@ -153,8 +158,9 @@ nav .dates .current{
   background-color: #557;
   border-radius: 0.2rem;
   padding: 0.25rem;
+  line-height: 1.3rem;
   color: #fff;
-  font-weight: 700;
+  letter-spacing: 0.03rem;
   text-decoration: none;
 }
 
@@ -167,6 +173,9 @@ nav .dates .current{
   justify-content: center;
   flex-direction: column;
   text-align: center;
+}
+.event .date h2{
+  line-height: 1.5rem;
 }
 
 .event .date .bucket {
@@ -186,4 +195,12 @@ nav .dates .current{
   justify-content: flex-end;
   flex-direction: column;
   text-align: center;
+}
+@media screen and (max-width:567px) {
+  .event .date h2{
+    margin: 0;
+  }
+  .event .date .month {
+    font-size: 1rem;
+  }
 }

@@ -5,7 +5,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+  <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/assets/stylesheets/pure.min.css">
   <link rel="stylesheet" href="/assets/stylesheets/main.css">
 
@@ -13,45 +14,57 @@
 <body>
 
   <nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-    <div class="pure-u-3-24">
-      <h1>ConfCal</h1>
+
+    <div class="pure-hidden-xs pure-hidden-sm">
+      <div class="pure-u-3-24">
+        <h1>ConfCal</h1>
+      </div>
+      <div class="pure-u-11-24">
+        <p class="dates">
+          <a href="#jan">Jan</a>
+          <a href="#feb">Feb</a>
+          <a href="#mar">Mar</a>
+          <a href="#apr">Apr</a>
+          <a href="#may">May</a>
+          <a href="#jun" class="current">Jun</a>
+          <a href="#jul">Jul</a>
+          <a href="#aug">Aug</a>
+          <a href="#sep">Sep</a>
+          <a href="#oct">Oct</a>
+          <a href="#nov">Nov</a>
+          <a href="#dec">Dec</a>
+        </p>
+      </div>
+      <div class="pure-u-10-24">
+        <form class="pure-g">
+          <input class="pure-u-3-4" type="text" placeholder="Search">
+          <input class="pure-u-1-4" type="button" value="Search">
+        </form>
+      </div>
     </div>
-    <div class="pure-u-11-24">
-      <p class="dates pure-hidden-xs pure-hidden-sm pure-hidden-md">
-        <a href="#jan">Jan</a>
-        <a href="#feb">Feb</a>
-        <a href="#mar">Mar</a>
-        <a href="#apr">Apr</a>
-        <a href="#may">May</a>
-        <a href="#jun" class="current">Jun</a>
-        <a href="#jul">Jul</a>
-        <a href="#aug">Aug</a>
-        <a href="#sep">Sep</a>
-        <a href="#oct">Oct</a>
-        <a href="#nov">Nov</a>
-        <a href="#dec">Dec</a>
-      </p>
-      <p class="dates pure-hidden-lg pure-hidden-xl">
-        <a href="#jan">J</a>
-        <a href="#feb">F</a>
-        <a href="#mar">M</a>
-        <a href="#apr">A</a>
-        <a href="#may">M</a>
-        <a href="#jun" class="current">J</a>
-        <a href="#jul">J</a>
-        <a href="#aug">A</a>
-        <a href="#sep">S</a>
-        <a href="#oct">O</a>
-        <a href="#nov">N</a>
-        <a href="#dec">D</a>
-      </p>
+
+    <div class="pure-hidden-md pure-hidden-lg pure-hidden-xl">
+      <div style="float: left">
+        <h1>ConfCal</h1>
+      </div>
+      <div style="float: right"">
+        <p class="dates">
+          <a href="#jan">J</a>
+          <a href="#feb">F</a>
+          <a href="#mar">M</a>
+          <a href="#apr">A</a>
+          <a href="#may">M</a>
+          <a href="#jun" class="current">J</a>
+          <a href="#jul">J</a>
+          <a href="#aug">A</a>
+          <a href="#sep">S</a>
+          <a href="#oct">O</a>
+          <a href="#nov">N</a>
+          <a href="#dec">D</a>
+        </p>
+      </div>
     </div>
-    <div class="pure-u-10-24">
-      <form class="pure-g">
-        <input class="pure-u-3-4" type="text" placeholder="Search">
-        <input class="pure-u-1-4" type="button" value="Search">
-      </form>
-    </div>
+
   </nav>
 
   <section>
