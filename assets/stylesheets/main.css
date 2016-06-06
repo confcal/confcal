@@ -239,7 +239,12 @@ nav .red-line{
 
 footer {
   background-color: rgba(0,0,0,0.5);
+  color: #fff;
   text-align: center;
   margin: 3rem 0 0 0;
   padding: 3rem 0.5rem;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
