@@ -58,9 +58,20 @@ nav .dates a{
   text-decoration: none;
   color: white;
   padding: 0 0 0 0.1rem;
+
+  position: relative;
+  z-index: 2;
 }
 nav .dates .current{
   font-weight: bold;
+}
+
+nav .red-line{
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: red;
+  z-index: 1;
 }
 
 .splash-container{

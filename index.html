@@ -21,18 +21,19 @@
       </div>
       <div class="pure-u-11-24">
         <p class="dates">
-          <a href="#jan">Jan</a>
-          <a href="#feb">Feb</a>
-          <a href="#mar">Mar</a>
-          <a href="#apr">Apr</a>
-          <a href="#may">May</a>
-          <a href="#jun" class="current">Jun</a>
-          <a href="#jul">Jul</a>
-          <a href="#aug">Aug</a>
-          <a href="#sep">Sep</a>
-          <a href="#oct">Oct</a>
-          <a href="#nov">Nov</a>
-          <a href="#dec">Dec</a>
+          <span class="red-line"></span>
+          <a href="#jan" data-month="1">Jan</a>
+          <a href="#feb" data-month="2">Feb</a>
+          <a href="#mar" data-month="3">Mar</a>
+          <a href="#apr" data-month="4">Apr</a>
+          <a href="#may" data-month="5">May</a>
+          <a href="#jun" data-month="6" class="current">Jun</a>
+          <a href="#jul" data-month="7">Jul</a>
+          <a href="#aug" data-month="8">Aug</a>
+          <a href="#sep" data-month="9">Sep</a>
+          <a href="#oct" data-month="10">Oct</a>
+          <a href="#nov" data-month="11">Nov</a>
+          <a href="#dec" data-month="12">Dec</a>
         </p>
       </div>
       <div class="pure-u-10-24">
@@ -49,18 +50,19 @@
       </div>
       <div style="float: right"">
         <p class="dates">
-          <a href="#jan">J</a>
-          <a href="#feb">F</a>
-          <a href="#mar">M</a>
-          <a href="#apr">A</a>
-          <a href="#may">M</a>
-          <a href="#jun" class="current">J</a>
-          <a href="#jul">J</a>
-          <a href="#aug">A</a>
-          <a href="#sep">S</a>
-          <a href="#oct">O</a>
-          <a href="#nov">N</a>
-          <a href="#dec">D</a>
+          <span class="red-line"></span>
+          <a href="#jan" data-month="1">J</a>
+          <a href="#feb" data-month="2">F</a>
+          <a href="#mar" data-month="3">M</a>
+          <a href="#apr" data-month="4">A</a>
+          <a href="#may" data-month="5">M</a>
+          <a href="#jun" data-month="6" class="current">J</a>
+          <a href="#jul" data-month="7">J</a>
+          <a href="#aug" data-month="8">A</a>
+          <a href="#sep" data-month="9">S</a>
+          <a href="#oct" data-month="10">O</a>
+          <a href="#nov" data-month="11">N</a>
+          <a href="#dec" data-month="12">D</a>
         </p>
       </div>
     </div>
@@ -107,7 +109,7 @@
   </section>
 
 <script id="event-template" type="text/x-handlebars-template">
-  <article class="event">
+  <article class="event" data-date="{{date}}">
     <div class="pure-g">
       <div class="pure-u-3-4">
         <div class="details">
@@ -145,7 +147,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-<script type="text/javascript" src="/assets/javascripts/main.js" async="true"></script>
+<script type="text/javascript" src="/assets/javascripts/vendor.js"></script>
+<script type="text/javascript" src="/assets/javascripts/main.js"></script>
 
 </body>
 </html>
