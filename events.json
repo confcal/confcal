@@ -63,5 +63,45 @@
     "banner_url": "",
     "tags"      : ["web", "development", "design", "devops", "back-end", "front-end"],
     "rfp_end"   : "0000-06-15"
+  },
+  {
+    "title"     : "Full Stack Fest",
+    "location"  : "Barcelona, Spain",
+    "date"      : "0000-09-5",
+    "url"       : "https://fullstackfest.com",
+    "banner_url": "",
+    "tags"      : ["web", "development", "devops", "back-end", "front-end"]
+  },
+  {
+    "title"     : "Full Stack Fest",
+    "location"  : "Barcelona, Spain",
+    "date"      : "0000-09-5",
+    "url"       : "https://fullstackfest.com",
+    "banner_url": "",
+    "tags"      : ["web", "development", "devops", "back-end", "front-end"]
+  },
+  {
+    "title"     : "CSSConf AU",
+    "location"  : "Melbourne, Australia",
+    "date"      : "0000-11-30",
+    "url"       : "http://cssconf.com.au",
+    "banner_url": "",
+    "tags"      : ["css", "ux", "web"]
+  },
+  {
+    "title"     : "JSConf AU",
+    "location"  : "Melbourne, Australia",
+    "date"      : "0000-12-01",
+    "url"       : "http://jsconfau.com/",
+    "banner_url": "",
+    "tags"      : ["javascript", "web", "development"]
+  },
+  {
+    "title"     : "Kiwicon",
+    "location"  : "Wellington, New Zealand",
+    "date"      : "0000-11-17",
+    "url"       : "http://kiwicon.org",
+    "banner_url": "",
+    "tags"      : ["cyber security", "infosec", "web", "lockpicking", "pyrotechnics"]
   }
 ]
