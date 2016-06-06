@@ -1,6 +1,7 @@
 html {
   font-family: 'Cabin', sans-serif;
   background-color: #22313F;
+  color: #fff;
   font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6, p, li, a {
@@ -138,6 +139,7 @@ nav .red-line{
 
 
 .event {
+  color: #000;
   background-color: #fff;
   margin: 2rem;
 }
@@ -214,4 +216,11 @@ nav .red-line{
   .event .date .month {
     font-size: 1rem;
   }
+}
+
+footer {
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  margin: 3rem 0 0 0;
+  padding: 3rem 0.5rem;
 }
