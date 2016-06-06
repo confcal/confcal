@@ -17,7 +17,7 @@
 
     <div class="pure-hidden-xs pure-hidden-sm">
       <div class="pure-u-3-24">
-        <h1>ConfCal</h1>
+        <h1><a href="/">ConfCal</a></h1>
       </div>
       <div class="pure-u-11-24">
         <p class="dates">
@@ -69,39 +69,49 @@
 
   </nav>
 
-  <section>
-    <article class="splash-container feature-container -wdcnz">
-      <div class="splash feature">
-        <h2>WDCNZ</h2>
-        <h3 class="-upcase">Mid June</h3>
-      </div>
-    </article>
+  <section class="featured-events">
+    <a href="#wdcnz">
+      <article class="splash-container feature-container -wdcnz">
+        <div class="splash feature">
+          <h2>WDCNZ</h2>
+          <h3 class="-upcase">Mid June</h3>
+        </div>
+      </article>
+    </a>
 
     <div class="pure-g pure-hidden-xs pure-hidden-s">
-      <article class="pure-u-1-4 feature-container -codemania">
-        <div class="feature">
-          <h3>Codemania</h3>
-          <h4 class="-upcase">Mid April</h4>
-        </div>
-      </article>
-      <article class="pure-u-1-4 feature-container -elasticon">
-        <div class="feature">
-          <h3>Elasticon</h3>
-          <h4 class="-upcase">Early March</h4>
-        </div>
-      </article>
-      <article class="pure-u-1-4 feature-container -saastr">
-        <div class="feature">
-          <h3>SaaStr</h3>
-          <h4 class="-upcase">Early Feb</h4>
-        </div>
-      </article>
-      <article class="pure-u-1-4 feature-container -wwdc">
-        <div class="feature">
-          <h3>WWDC</h3>
-          <h4 class="-upcase">June</h4>
-        </div>
-      </article>
+      <a href="#codemania" class="pure-u-1-4 feature-container -codemania">
+        <article>
+          <div class="feature">
+            <h3>Codemania</h3>
+            <h4 class="-upcase">Mid April</h4>
+          </div>
+        </article>
+      </a>
+      <a href="#elasticon" class="pure-u-1-4 feature-container -elasticon">
+        <article>
+          <div class="feature">
+            <h3>Elasticon</h3>
+            <h4 class="-upcase">Early March</h4>
+          </div>
+        </article>
+      </a>
+      <a href="#saastr" class="pure-u-1-4 feature-container -saastr">
+        <article>
+          <div class="feature">
+            <h3>SaaStr</h3>
+            <h4 class="-upcase">Early Feb</h4>
+          </div>
+        </article>
+      </a>
+      <a href="#wwdc" class="pure-u-1-4 feature-container -wwdc">
+        <article>
+          <div class="feature">
+            <h3>WWDC</h3>
+            <h4 class="-upcase">June</h4>
+          </div>
+        </article>
+      </a>
     </div>
   </section>
 
@@ -129,7 +139,7 @@
     <div class="pure-g">
       <div class="pure-u-3-4">
         <div class="details">
-          <h1>
+          <h1 class="-anchored" id="{{toParam title}}">
             <a href="{{url}}">
               {{title}}
             </a>

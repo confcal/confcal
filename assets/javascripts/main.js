@@ -1,3 +1,9 @@
+Handlebars.registerHelper('toParam', function(string) {
+  var string = Handlebars.escapeExpression(string);
+  return new Handlebars.SafeString(
+     string.replace(/[^0-9a-z\ \-]/gi, '').replace(/\s+/g, '-').toLowerCase()
+  );
+});
 Handlebars.registerHelper('strftime', function(string, format) {
   var string = Handlebars.escapeExpression(string),
       format = Handlebars.escapeExpression(format);
@@ -53,7 +59,7 @@ var moveDateMarkerTo = function(string){
 
 $.getJSON('/events.json', function(data){
   data.sort(function(a, b) {
-    return moment(a.date).isAfter( moment(b.date) );
+    return moment(a.date) - moment(b.date);
   });
 
   $.each(data, function(index, item){
