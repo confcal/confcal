@@ -137,9 +137,10 @@
   </footer>
 
 <script id="event-template" type="text/x-handlebars-template">
-  <article class="event" data-date="{{date}}">
-    <div class="pure-g">
-      <div class="pure-u-3-4">
+  <article class="event" data-date="{{date}}" data-month="{{strftime date "MMM"}}">
+    <a id="{{id}}" class="-anchored"></a>
+    <div class="pure-g" style="display: table;width:100%;">
+      <div class="pure-u-3-4" style="display: table-cell;">
         <div class="details">
           <h1 class="-anchored" id="{{toParam title}}">
             <a href="{{url}}">
@@ -154,7 +155,7 @@
           </p>
         </div>
       </div>
-      <div class="pure-u-1-4 date">
+      <div class="pure-u-1-4 date" style="display: table-cell;">
         <h2>
           <span class="bucket">{{bucketFromDate date}}</span>
           <span class="month">{{strftime date "MMMM"}}</span>
@@ -170,6 +171,9 @@
       </div>
     </div>
   </article>
+</script>
+<script id="month-anchor-template" type="text/x-handlebars-template">
+  <a id="{{this}}" class="-anchored"></a>
 </script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>

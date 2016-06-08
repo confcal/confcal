@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6, p, li, a {
 .-anchored{
   position: relative;
 }
+
 .-anchored:before {
   display: block;
   content: " ";
@@ -30,12 +31,10 @@ a {
 
 nav {
   background-color: #22313F;
-  color: white;
   height: 3rem;
 }
 nav a {
-  color: white;
-  text-decoration: none;
+  color: #fff;
 }
 nav h1{
   margin: 0 1rem;
@@ -68,7 +67,7 @@ nav .dates{
 }
 nav .dates a{
   text-decoration: none;
-  color: white;
+  color: rgba(255,255,255,0.5);
   padding: 0 0 0 0.1rem;
 
   position: relative;
@@ -76,6 +75,12 @@ nav .dates a{
 }
 nav .dates .current{
   font-weight: bold;
+}
+nav .dates a.present {
+  color: rgba(255,255,255,1);
+}
+nav .dates a:not(.present):hover {
+  cursor: default;
 }
 
 nav .red-line{
@@ -98,7 +103,7 @@ nav .red-line{
 }
 
 .feature-container {
-  color: white;
+  color: #fff;
   text-align: center;
 
   background-size: cover;
@@ -158,8 +163,6 @@ nav .red-line{
 /* Event lists */
 
 .event {
-  color: #000;
-  background-color: #fff;
   margin: 2rem;
 }
 .event h1, h2, p{
@@ -184,6 +187,8 @@ nav .red-line{
   font-size: 0.65rem;
 }
 .event .details {
+  color: #000;
+  background-color: #fff;
   padding: 0.5rem;
 }
 .event .tags a {
@@ -201,11 +206,9 @@ nav .red-line{
   background-color: #27ae60;
   color: #fff;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   text-align: center;
 }
+
 .event .date h2{
   line-height: 1.5rem;
 }
@@ -223,11 +226,8 @@ nav .red-line{
   padding: 1rem 0;
   display: block;
   background-color: rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  text-align: center;
 }
+
 @media screen and (max-width:567px) {
   .event .date h2{
     margin: 0;

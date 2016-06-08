@@ -25,11 +25,6 @@ Handlebars.registerHelper('bucketFromDate', function(string) {
   }
 });
 
-var source   = $("#event-template").html();
-var template = Handlebars.compile(source);
-
-var region   = $("#events-region");
-
 var moveDateMarkerTo = function(string){
   var datesEls = $("nav .dates"),
     date = moment(string),
@@ -57,14 +52,29 @@ var moveDateMarkerTo = function(string){
   });
 }
 
+var eventSource   = $("#event-template").html();
+var eventTemplate = Handlebars.compile(eventSource);
+var region   = $("#events-region");
+
 $.getJSON('/events.json', function(data){
   data.sort(function(a, b) {
     return moment(a.date) - moment(b.date);
   });
 
   $.each(data, function(index, item){
-    var el = $(template(item));
+
+    // Make this event drop an anchor if it's the first for its month
+    var month = moment(item.date).format("MMM").toLowerCase();
+    if($("#" + month).length == 0){
+      // The template will add an anchor
+      item.id = month;
+      // And let's activate the month in the nav bar
+      $("a[href='#" + month + "']").addClass("present");
+    }
+
+    var el = $(eventTemplate(item));
     el.appendTo(region);
+
     $(el).waypoint({
       handler: function(direction) {
         moveDateMarkerTo(el.data("date"));
