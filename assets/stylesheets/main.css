@@ -267,10 +267,19 @@ footer {
   background-color: rgba(0,0,0,0.5);
   color: #fff;
   text-align: center;
-  margin: 3rem 0 0 0;
-  padding: 3rem 0.5rem;
+  margin: 2rem 0 0 0;
+  padding: 2rem 0.5rem;
+}
+footer p {
+  margin: 2rem 0;
 }
 footer a {
   color: #fff;
   text-decoration: underline;
+}
+footer .nz{
+  position: relative;
+  top: 0.5rem;
+  height: 2rem;
+  padding: 0 0.5rem;
 }
