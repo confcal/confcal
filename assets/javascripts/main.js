@@ -44,7 +44,7 @@ var moveDateMarkerTo = function(string){
 
   $.each(datesEls, function(index, element){
     var redLineEl = $(element).find(".red-line"),
-      newMonth = $("nav .dates").find("a[data-month='" + month + "']"),
+      newMonth = $(element).find("a[data-month='" + month + "']"),
       // The month, shifted to the right depending on where in the month we are
       position = newMonth.position().left + newMonth.width() * positionMultiplier;
 
