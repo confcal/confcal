@@ -163,9 +163,13 @@
             <div class="pure-u-1-4">
               <p class="flair">
                 {{#if coc_url}}
-                  <a title="Read {{title}}'s Code of Conduct" href="{{coc_url}}" class="coc yes">CoC &#10003;</a>
-                {{else}}
-                  <a title="{{title}} has no Code of Conduct" class="coc no">CoC &#10007;</a>
+                  <a title="Read {{title}}'s Code of Conduct" href="{{coc_url}}">CoC</a>
+                {{/if}}
+                {{#if diversity_url}}
+                  <a title="Read {{title}}'s Diversity statement" href="{{diversity_url}}">&#9775;</a>
+                {{/if}}
+                {{#if rfp_expenses}}
+                  <a title="Speaker reimbursement available">&#9992;</a>
                 {{/if}}
               </p>
             </div>

@@ -220,11 +220,10 @@ nav .red-line{
 .event .flair {
   float: right;
 }
-
-a.coc.yes {
+.event .flair a {
   background-color: #27ae60
 }
-a.coc.no {
+.event .flair  a.bad {
   background-color: #aaa;
 }
 
