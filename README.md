@@ -10,6 +10,11 @@ try to be too specific.
 
 Hopefully this doesn't just add to the noise, but is actually useful.
 
+## Contributing
+
+Follow [CONTRIBUTING.md](https://github.com/confcal/confcal.github.io/blob/master/CONTRIBUTING.md)
+ if you want to add a new event, or spot an error.
+
 ## Gameplan:
 
   - Design a simple prototype using Github Pages
