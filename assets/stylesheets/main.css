@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6, p, li, a {
 
 .-anchored{
   position: relative;
+  left: -9999px;
 }
 
 .-anchored:before {
@@ -202,14 +203,29 @@ nav .red-line{
   background-color: #fff;
   padding: 0.5rem;
 }
-.event .tags a {
+
+.event .tags, .event .flair {
+  margin-top: 0;
+}
+.event .tags a, .event .flair a {
   background-color: #557;
   border-radius: 0.2rem;
   padding: 0.25rem;
-  line-height: 1.3rem;
+
   color: #fff;
+  line-height: 1.3rem;
   letter-spacing: 0.03rem;
   text-decoration: none;
+}
+.event .flair {
+  float: right;
+}
+
+a.coc.yes {
+  background-color: #27ae60
+}
+a.coc.no {
+  background-color: #aaa;
 }
 
 .event .date{

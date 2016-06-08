@@ -115,6 +115,7 @@
   </section>
 
   <section id="events-region">
+    <h2 style="text-align: center; padding: 5rem;">Please enable JavaScript! :)</h2>
   </section>
 
   <footer>
@@ -138,21 +139,37 @@
 
 <script id="event-template" type="text/x-handlebars-template">
   <article class="event" data-date="{{date}}" data-month="{{strftime date "MMM"}}">
-    <a id="{{id}}" class="-anchored"></a>
+    {{#if id}}
+      <a id="{{id}}" class="-anchored"></a>
+    {{/if}}
+    <a id="{{toParam title}}" class="-anchored"></a>
     <div class="pure-g" style="display: table;width:100%;">
       <div class="pure-u-3-4" style="display: table-cell;">
         <div class="details">
-          <h1 class="-anchored" id="{{toParam title}}">
+          <h1>
             <a href="{{url}}">
               {{title}}
             </a>
           </h1>
           <h2>{{location}}</h2>
-          <p class="tags">
-            {{#each tags}}
-              <a href="">{{this}}</a>
-            {{/each}}
-          </p>
+          <div class="pure-g">
+            <div class="pure-u-3-4">
+              <p class="tags">
+                {{#each tags}}
+                  <a href="">{{this}}</a>
+                {{/each}}
+              </p>
+            </div>
+            <div class="pure-u-1-4">
+              <p class="flair">
+                {{#if coc_url}}
+                  <a title="Read {{title}}'s Code of Conduct" href="{{coc_url}}" class="coc yes">CoC &#10003;</a>
+                {{else}}
+                  <a title="{{title}} has no Code of Conduct" class="coc no">CoC &#10007;</a>
+                {{/if}}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="pure-u-1-4 date" style="display: table-cell;">

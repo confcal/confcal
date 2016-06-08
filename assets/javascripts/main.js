@@ -61,6 +61,9 @@ $.getJSON('/events.json', function(data){
     return moment(a.date) - moment(b.date);
   });
 
+  // Clear out the Enable JS message
+  region.html("");
+
   $.each(data, function(index, item){
 
     // Make this event drop an anchor if it's the first for its month
