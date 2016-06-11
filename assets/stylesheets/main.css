@@ -1,7 +1,6 @@
 html {
   font-family: 'Cabin', sans-serif;
   background-color: #22313F;
-  color: #fff;
   font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6, p, li, a {
@@ -26,11 +25,12 @@ h1, h2, h3, h4, h5, h6, p, li, a {
 }
 
 a {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
 }
 
 nav {
+  color: #fff;
   background-color: #22313F;
   height: 3rem;
 }
@@ -178,6 +178,21 @@ nav .red-line{
 /* Event lists */
 
 .event {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -webkit-align-items: stretch;
+
+  background-color: white;
   margin: 2rem;
 }
 .event h1, h2, p{
@@ -198,71 +213,91 @@ nav .red-line{
   font-size: 0.75rem;
   line-height: 0.75rem;
 }
-.event p{
-  font-size: 0.65rem;
-}
-.event .details {
-  color: #000;
-  background-color: #fff;
-  padding: 0.5rem;
-}
+.event .tags-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
 
-.event .tags, .event .flair {
-  margin-top: 0;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -webkit-align-content: stretch;
+  -webkit-align-items: stretch;
+
+  margin-top: -0.5rem;
 }
-.event .tags a, .event .flair a {
+.event .tags-container a {
   background-color: #557;
   border-radius: 0.2rem;
   padding: 0.25rem;
 
+  font-size: 0.65rem;
   color: #fff;
   line-height: 1.3rem;
   letter-spacing: 0.03rem;
   text-decoration: none;
 }
-.event .flair {
-  float: right;
-}
 .event .flair a {
   background-color: #27ae60
 }
-.event .flair  a.bad {
-  background-color: #aaa;
-}
 
-.event .date{
-  position: relative;
+.event .right {
   background-color: #27ae60;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-}
 
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -webkit-align-content: stretch;
+  -webkit-align-items: center;
+}
+.event .date, .event .rfp {
+  width: 100%;
+  text-align: center;
+}
 .event .date h2{
+  font-size: 1.5rem;
   line-height: 1.5rem;
 }
-
-.event .date .bucket {
+.event .date h2 small {
   font-size: 1rem;
-  display: block;
 }
-.event .date .month {
-  font-size: 1.5rem;
-  width: 100%;
-}
-.event .date .rfp {
-  margin: 0;
-  padding: 1rem 0;
-  display: block;
+
+.event .rfp {
   background-color: rgba(0,0,0,0.3);
 }
+.event .rfp p {
+  margin: 0.5rem;
+}
+
 
 @media screen and (max-width:567px) {
-  .event .date h2{
+  .event .date {
     margin: 0;
   }
-  .event .date .month {
-    font-size: 1rem;
+  .event .date h2{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+  .event .date h2 small {
+    font-size: 0.6rem;
+  }
+  .event .rfp {
+    font-size: 0.6rem;
   }
 }
 
@@ -277,7 +312,6 @@ footer p {
   margin: 2rem 0;
 }
 footer a {
-  color: #fff;
   text-decoration: underline;
 }
 footer .nz{

@@ -153,63 +153,60 @@
   </footer>
 
 <script id="event-template" type="text/x-handlebars-template">
-  <article class="event" data-date="{{date}}" data-month="{{strftime date "MMM"}}">
+  <article class="event pure-g" data-date="{{date}}" data-month="{{strftime date "MMM"}}">
     {{#if id}}
       <a id="{{id}}" class="-anchored"></a>
     {{/if}}
     <a id="{{toParam title}}" class="-anchored"></a>
-    <div class="pure-g" style="display: table;width:100%;">
-      <div class="pure-u-3-4" style="display: table-cell;">
-        <div class="details">
-          <h1>
-            <a href="{{url}}">
-              {{title}}
-            </a>
-          </h1>
-          <h2>{{location}}</h2>
-          <div class="pure-g">
-            <div class="pure-u-3-4">
-              <p class="tags">
-                {{#each tags}}
-                  <a href="">{{this}}</a>
-                {{/each}}
-              </p>
-            </div>
-            <div class="pure-u-1-4">
-              <p class="flair">
-                {{#if coc_url}}
-                  <a title="Read {{title}}'s Code of Conduct" href="{{coc_url}}">CoC</a>
-                {{/if}}
-                {{#if diversity_url}}
-                  <a title="Read {{title}}'s Diversity statement" href="{{diversity_url}}">&#9775;</a>
-                {{/if}}
-                {{#if rfp_expenses}}
-                  <a title="Speaker reimbursement available">&#9992;</a>
-                {{/if}}
-              </p>
-            </div>
-          </div>
-        </div>
+
+    <div class="pure-u-3-4 left">
+      <h1>
+        <a href="{{url}}">
+          {{title}}
+        </a>
+      </h1>
+      <h2>{{location}}</h2>
+      <div class="tags-container">
+        <p class="tags">
+          {{#each tags}}
+            <a href="">{{this}}</a>
+          {{/each}}
+        </p>
+        <p class="flair">
+          {{#if coc_url}}
+            <a title="Read {{title}}'s Code of Conduct" href="{{coc_url}}">CoC</a>
+          {{/if}}
+          {{#if diversity_url}}
+            <a title="Read {{title}}'s Diversity statement" href="{{diversity_url}}">&#9775;</a>
+          {{/if}}
+          {{#if rfp_expenses}}
+            <a title="Speaker reimbursement available">&#9992;</a>
+          {{/if}}
+        </p>
       </div>
-      <div class="pure-u-1-4 date" style="display: table-cell;">
+    </div>
+
+    <div class="pure-u-1-4 right">
+      <div class="date">
         <h2>
-          <span class="bucket">{{bucketFromDate date}}</span>
-          <span class="month">{{strftime date "MMMM"}}</span>
+          <small>{{bucketFromDate date}}</small><br />
+          {{strftime date "MMMM"}}
         </h2>
-        {{#if rfp_end}}
-          <h3 class="rfp">
+      </div>
+
+      {{#if rfp_end}}
+        <div class="rfp">
+          <p>
             RFP: {{#if rfp_start}}
               {{strftime rfp_start "MMM"}} -
             {{/if}}
             {{strftime rfp_end "MMM"}}
-          </h3>
-        {{/if}}
-      </div>
+          </p>
+        </div>
+      {{/if}}
     </div>
+
   </article>
-</script>
-<script id="month-anchor-template" type="text/x-handlebars-template">
-  <a id="{{this}}" class="-anchored"></a>
 </script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
