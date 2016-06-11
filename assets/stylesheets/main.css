@@ -369,3 +369,9 @@ footer .nz{
   height: 2rem;
   padding: 0 0.5rem;
 }
+
+#search-term-region {
+  display: none;
+  margin: 2rem;
+  text-align: center;
+}

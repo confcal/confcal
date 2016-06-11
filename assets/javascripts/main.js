@@ -70,7 +70,11 @@ var eventSource   = $("#event-template").html();
 var eventTemplate = Handlebars.compile(eventSource);
 var region   = $("#events-region");
 
+window.data = [];
+
 $.getJSON('/events.json', function(data){
+
+  window.data = data;
 
   // Sort chronologically
   data.sort(function(a, b) {
@@ -138,3 +142,62 @@ $.getJSON('/events.json', function(data){
   }
 
 });
+
+// A naive Search function, which just iterates through all events
+
+// Don't let nasty search terms through
+function escapeRegExp(string){
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+}
+
+var searchHeaderSource   = $("#search-header-template").html();
+var searchHeaderTemplate = Handlebars.compile(searchHeaderSource);
+
+window.searchEvents = function(query) {
+  // Build a safe query string which will match th
+  var safeQuery = escapeRegExp(query),
+    regex = new RegExp( safeQuery + ".*", 'i'),
+    matches = 0;
+
+  // Find any items which match, and show/hide their row
+  $.each(data, function(index, item){
+
+    var id = "#" + Handlebars.helpers.toParam(item.title).string,
+      otherTerms = "";
+    if (!!item.rfp_end) { otherTerms += " rfp " }
+    if (!!item.coc_url) { otherTerms += " coc " }
+    if (!!item.diversity_url) { otherTerms += " diversity " }
+    if(
+      query.length == 0 ||
+      regex.test(item.title) ||
+      regex.test(item.location) ||
+      regex.test(moment(item.date, "YYYY-MM-DD").format("MMMM")) ||
+      regex.test(item.tags.join(" ")) ||
+      regex.test(otherTerms)
+    ){
+      matches += 1;
+      $(id).parent().show();
+    } else {
+      $(id).parent().hide();
+    }
+  });
+
+
+  if (query.length > 0) {
+    $("#search-term-region").show();
+    var el = $(searchHeaderTemplate({query: query, count: matches}));
+    $("#search-term-region").html(el.html());
+  } else {
+    $("#search-term-region").hide();
+  }
+
+}
+
+var searchInput = $("form#search input[name=query]"),
+  typingTimer;
+searchInput.on("input", function() {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(function() {
+    searchEvents( searchInput.val() );
+  }, 200);
+})
