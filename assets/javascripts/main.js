@@ -48,6 +48,19 @@ moveDateMarkerTo = function(string){
       // The month, shifted to the right depending on where in the month we are
       position = newMonth.position().left + newMonth.width() * positionMultiplier;
 
+    // If we are between Dec going to Jan, do some nice animation to go "around"
+    // Going from Dec to Jan (scrolling down)
+    if(month == 1 && $(redLineEl).data("month") == 12){
+      var firstMonth = redLineEl.siblings().first();
+      $(redLineEl).css({left: firstMonth.position().left});
+    }
+    // Going from Jan to Dec (scrolling up)
+    if(month == 12 && $(redLineEl).data("month") == 1){
+      var lastMonth = redLineEl.siblings().last();
+      $(redLineEl).css({left: lastMonth.position().left + lastMonth.width() });
+    }
+
+    $(redLineEl).data("month", month);
     $(redLineEl).animate({left: position});
     $(redLineEl).removeClass("hidden");
   });
