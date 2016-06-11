@@ -93,6 +93,9 @@ nav .red-line{
   background-color: red;
   z-index: 1;
 }
+nav .red-line.hidden{
+  visibility: hidden;
+}
 
 /* Featured Events at the top */
 
