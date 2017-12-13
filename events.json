@@ -134,5 +134,13 @@
     "url"       : "https://codemania.io",
     "banner_url": "",
     "tags"      : ["software", "developers", "technology"]
-  }
+  },
+  {
+ +    "title"     : "AWS re:Invent",
+ +    "location"  : "Las Vegas, USA",
+ +    "date"      : "0000-11-26",
+ +    "url"       : "https://reinvent.awsevents.com/",
+ +    "banner_url": "https://reinvent.awsevents.com/_media/images/branding/aws-reinvent-logo.png",
+ +    "tags"      : ["aws", "cloud"]
+ +  }
 ]
