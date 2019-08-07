@@ -134,5 +134,13 @@
     "url"       : "https://codemania.io",
     "banner_url": "",
     "tags"      : ["software", "developers", "technology"]
+  },
+  {
+    "title"     : "Google Cloud Next",
+    "location"  : "San Francisco, USA",
+    "date"      : "0000-07-24",
+    "url"       : "https://cloud.withgoogle.com/next18",
+    "banner_url": "https://cloud.withgoogle.com/next18/site/assets/media/images/google-cloud.svg",
+    "tags"      : ["googlecloudplatform", "publiccloud"]
   }
 ]
